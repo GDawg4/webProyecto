@@ -9,6 +9,8 @@ from babies.serializers import BabySerializer
 from parents.models import Parent
 from parents.serializers import ParentSerializer
 
+from django.contrib.auth.models import User
+
 # Create your views here.
 
 
@@ -26,5 +28,4 @@ class ParentViewSet(viewsets.ModelViewSet):
     def babies(self, request, pk=None):
         allBabies = Baby.objects.all().filter(parent=pk)
         serialized = BabySerializer(allBabies, many=True)
-        print(self)
         return Response(serialized.data)
