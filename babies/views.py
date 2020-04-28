@@ -22,7 +22,7 @@ class BabyViewSet(viewsets.ModelViewSet):
             name='BabyPermission',
             permission_configuration={
                 'base': {
-                    'create': is_parent,
+                    'create': True,
                     'list': False,
                 },
                 'instance': {

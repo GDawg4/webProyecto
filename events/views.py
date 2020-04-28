@@ -21,7 +21,7 @@ class EventViewSet(viewsets.ModelViewSet):
         name='eventPermission',
         permission_configuration={
                 'base': {
-                    'create': test(),
+                    'create': True,
                     'list': False,
                 },
                 'instance': {
